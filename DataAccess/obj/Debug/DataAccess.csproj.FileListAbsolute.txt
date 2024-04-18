@@ -1,0 +1,2 @@
+D:\khoa_hoc_cshap\NetBaiTap\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+D:\khoa_hoc_cshap\NetBaiTap\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache

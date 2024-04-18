@@ -1,0 +1,7 @@
+D:\khoa_hoc_cshap\NetBaiTap\CML\bin\Debug\CML.exe.config
+D:\khoa_hoc_cshap\NetBaiTap\CML\bin\Debug\CML.exe
+D:\khoa_hoc_cshap\NetBaiTap\CML\bin\Debug\CML.pdb
+D:\khoa_hoc_cshap\NetBaiTap\CML\obj\Debug\CML.csproj.AssemblyReference.cache
+D:\khoa_hoc_cshap\NetBaiTap\CML\obj\Debug\CML.csproj.CoreCompileInputs.cache
+D:\khoa_hoc_cshap\NetBaiTap\CML\obj\Debug\CML.exe
+D:\khoa_hoc_cshap\NetBaiTap\CML\obj\Debug\CML.pdb
