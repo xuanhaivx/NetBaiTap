@@ -144,7 +144,7 @@ namespace DataAccess.LE
                         else if (ngayKhaiSinh > DateTime.Now)
                         {
 
-                            Console.WriteLine("Bạn Đã Nhập Ngày Khai Khai Ở Tương Lai. Hãy Nhập Lại");
+                            Console.WriteLine("Bạn Đã Nhập Ngày Khai Sinh Ở Tương Lai. Hãy Nhập Lại");
                         }
 
                     } while (!CML.ValiDateProduct.CheckDateTimeInput(inputNgaySinh, out ngayKhaiSinh)|| ngayKhaiSinh > DateTime.Now);
