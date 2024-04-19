@@ -21,9 +21,9 @@ namespace DataAccess.LE
             {
                 while (true)
                 {
+                    // Nhập Tên Khóa Học
                     
-                    
-                        Console.WriteLine("Nhập Tên Khóa Học");
+                    Console.WriteLine("Nhập Tên Khóa Học");
                     string nhapTenKhoaHoc;
                     do
                     {
@@ -37,7 +37,7 @@ namespace DataAccess.LE
                         }
                     } while (!CML.ValiDateProduct.KiemTraInputChuTrong(nhapTenKhoaHoc));
 
-
+                    // Nhập mô tả khóa học
                     Console.WriteLine("Mô Tả Khóa Học");
                     string motaKhoaHoc;
                     do
@@ -51,6 +51,7 @@ namespace DataAccess.LE
                         
                         }
                     } while (!CML.ValiDateProduct.KiemTraInputChuTrong(motaKhoaHoc));
+                    // Nhập Học Phí Khóa Học
                     Console.WriteLine("Học Phí Khóa Học");
                     decimal nhapHocPhiKhoaHoc;
                     string hocPhiInput;
@@ -66,6 +67,7 @@ namespace DataAccess.LE
 
                     } while (!CML.ValiDateProduct.CheckTienVNInput(hocPhiInput, out nhapHocPhiKhoaHoc));
                     
+                    // Nhập Ngày Khai Giảng
                     Console.WriteLine("Nhập Ngày Khai Giảng (dd/MM/yyyy)");
                     DateTime ngayKhaiGiang;
                     string ngayKhaiGiangInput;
@@ -83,7 +85,7 @@ namespace DataAccess.LE
 
                     } while (!CML.ValiDateProduct.CheckDateTimeInput(ngayKhaiGiangInput, out ngayKhaiGiang) || ngayKhaiGiang < DateTime.Now);
 
-
+                    // -------------------------------------------------------------
                     khoaHocs.Add(new KhoaHoc(nhapTenKhoaHoc,motaKhoaHoc,nhapHocPhiKhoaHoc,ngayKhaiGiang));
                     
                     Console.WriteLine("Bạn Có Muốn Nhập Thêm Khóa Học Không. Nếu Có (Nhấn 1). Nếu không (Nhấn Enter)");
@@ -96,10 +98,10 @@ namespace DataAccess.LE
                 rtdata.ReturnMsg = "Thêm Khóa Học thành công";
                 Console.WriteLine(rtdata.ReturnMsg);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 rtdata.ReturnCode = -99;
-                rtdata.ReturnMsg = "Lỗi không xác định";
+                rtdata.ReturnMsg = "Lỗi không xác định"+ex;
                 Console.WriteLine(rtdata.ReturnMsg);
             }
             return rtdata;
@@ -115,7 +117,7 @@ namespace DataAccess.LE
                 while (true)
                 {
 
-
+                    // Nhập Tên Học Sinh
                     Console.WriteLine("Nhập Tên Học Sinh");
                     string nhapTenHocSinh;
 
@@ -129,6 +131,8 @@ namespace DataAccess.LE
                             Console.WriteLine(rtdata.ReturnMsg);
                         }
                     } while (!CML.ValiDateProduct.KiemTraInputChuTrong(nhapTenHocSinh));
+
+                    // Nhập Ngày Sinh Học Sinh
                     Console.WriteLine("Nhập Ngày Ngày Sinh Học Sinh (Ngày/ Tháng/ năm)");
                     string inputNgaySinh;
                     DateTime ngayKhaiSinh;
@@ -152,6 +156,7 @@ namespace DataAccess.LE
                     Student hocSinhNew = new Student(nhapTenHocSinh, ngayKhaiSinh);
                     // Hiển thị danh sách khóa học trước khi nhập tên khóa học muốn đăng ký
                     DanhSachKhoaHoc();
+                    // nhập tên khóa học muốn học
                     Console.WriteLine("Nhập Tên Khóa Học Muốn Đăng Ký");
                     string nhapTenKhoaHoc;
                     KhoaHoc tenTimKiemKhoaHoc;

@@ -27,10 +27,11 @@ namespace DataAccess.OB
 
         public override string ToString()
         {
-            return $"Ten Khóa Học : {TenKhoaHoc}\n +" +
+            return $"+ Ten Khóa Học : {TenKhoaHoc}\n +" +
                 $" Mô Tả Khóa Học :{MotaKhoaHoc}\n +" +
                 $"Học Phí :  {HocPhiKhoaHoc.ToString("N2")} \n +" +
-                $"Ngày Khai Giảng: {NgayKhaiGiang.ToString("dd/MM/yyyy")} ";
+                $"Ngày Khai Giảng: {NgayKhaiGiang.ToString("dd/MM/yyyy")}\n+" +
+                $"----------------------- ";
         }
 
     }
