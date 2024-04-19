@@ -9,3 +9,6 @@ D:\khoa_hoc_cshap\NetBaiTap\NetBaiTap\obj\Debug\NetBaiTap.csproj.CoreCompileInpu
 D:\khoa_hoc_cshap\NetBaiTap\NetBaiTap\obj\Debug\NetBaiTap.csproj.Up2Date
 D:\khoa_hoc_cshap\NetBaiTap\NetBaiTap\obj\Debug\NetBaiTap.exe
 D:\khoa_hoc_cshap\NetBaiTap\NetBaiTap\obj\Debug\NetBaiTap.pdb
+D:\khoa_hoc_cshap\NetBaiTap\NetBaiTap\bin\Debug\DataAccess.exe
+D:\khoa_hoc_cshap\NetBaiTap\NetBaiTap\bin\Debug\DataAccess.pdb
+D:\khoa_hoc_cshap\NetBaiTap\NetBaiTap\bin\Debug\DataAccess.exe.config

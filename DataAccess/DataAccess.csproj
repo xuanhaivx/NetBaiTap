@@ -44,10 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IT\IProductMng.cs" />
-    <Compile Include="LE\MenuB9B1va3.cs" />
     <Compile Include="LE\ProductManager.cs" />
     <Compile Include="OB\Product.cs" />
     <Compile Include="OB\ReturnData.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

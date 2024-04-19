@@ -12,6 +12,7 @@ namespace DataAccess.IT
         ReturnData BuyProduct();
         void DisplayProducts();
         ReturnData AddProduct();
+        void xapXepProduc();
         
     }
 }
