@@ -130,24 +130,26 @@ namespace DataAccess.LE
                         }
                     } while (!CML.ValiDateProduct.KiemTraInputChuTrong(nhapTenHocSinh));
                     Console.WriteLine("Nhập Ngày Ngày Sinh Học Sinh (Ngày/ Tháng/ năm)");
+                    string inputNgaySinh;
                     DateTime ngayKhaiSinh;
 
                     do
                     {
+                        inputNgaySinh = Console.ReadLine();
 
-                        if (!CML.ValiDateProduct.CheckDateTimeInput(Console.ReadLine(), out ngayKhaiSinh))
+                        if (!CML.ValiDateProduct.CheckDateTimeInput(inputNgaySinh, out ngayKhaiSinh))
                         {
                             Console.WriteLine("Ngày Khai Giảng Bị Lỗi Định Dạng (Ngày/ Tháng/ năm). Vui Lòng Nhập Lại");
                         }
-                        
-                        if (ngayKhaiSinh > DateTime.Now)
+                        else if (ngayKhaiSinh > DateTime.Now)
                         {
+
                             Console.WriteLine("Bạn Đã Nhập Ngày Khai Khai Ở Tương Lai. Hãy Nhập Lại");
                         }
-                        
-                    } while (!CML.ValiDateProduct.CheckDateTimeInput(Console.ReadLine(), out ngayKhaiSinh)|| ngayKhaiSinh > DateTime.Now);
 
-                    
+                    } while (!CML.ValiDateProduct.CheckDateTimeInput(inputNgaySinh, out ngayKhaiSinh)|| ngayKhaiSinh > DateTime.Now);
+
+                    Student hocSinhNew = new Student(nhapTenHocSinh, ngayKhaiSinh);
                     // Hiển thị danh sách khóa học trước khi nhập tên khóa học muốn đăng ký
                     DanhSachKhoaHoc();
                     Console.WriteLine("Nhập Tên Khóa Học Muốn Đăng Ký");
@@ -163,8 +165,8 @@ namespace DataAccess.LE
                             Console.WriteLine(rtdata.ReturnMsg);
                         }
                     } while (tenTimKiemKhoaHoc == null);
-                    DateTime ngayDangKy = DateTime.Now;
-                    dangKyHocs.Add(new DangKyHoc(nhapTenKhoaHoc, ngayKhaiSinh, ngayDangKy, nhapTenKhoaHoc));
+                    
+                    dangKyHocs.Add(new DangKyHoc(hocSinhNew, tenTimKiemKhoaHoc, DateTime.Now));
 
                     Console.WriteLine("Bạn Có Muốn Đăng Ký Thêm Khóa Học Không. Nếu Có (Nhấn 1). Nếu không (Nhấn Enter)");
                     if (!int.TryParse(Console.ReadLine(), out int nhapNuaKhong) || nhapNuaKhong != 1)

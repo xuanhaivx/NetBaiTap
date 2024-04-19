@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace DataAccess.OB
 {
-    public class Student:KhoaHoc
+    public class Student
     {
         public string TenHocSinh { get; set; }
         public DateTime NgaySinhHocSinh { get; set; }
-        public Student(string tenHocSinh,DateTime ngaySinhHocSinh, string tenKhoaHoc):base(tenKhoaHoc)
+
+        public Student(string tenHocSinh, DateTime ngaySinhHocSinh)
         {
             TenHocSinh = tenHocSinh;
             NgaySinhHocSinh = ngaySinhHocSinh;
-
         }
     }
-    
+
 }
