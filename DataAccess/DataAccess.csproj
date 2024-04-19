@@ -44,9 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IT\IProductMng.cs" />
+    <Compile Include="IT\IStudentRegister.cs" />
     <Compile Include="LE\ProductManager.cs" />
+    <Compile Include="LE\StudentRegister.cs" />
+    <Compile Include="OB\DangKyHoc.cs" />
+    <Compile Include="OB\KhoaHoc.cs" />
     <Compile Include="OB\Product.cs" />
     <Compile Include="OB\ReturnData.cs" />
+    <Compile Include="OB\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

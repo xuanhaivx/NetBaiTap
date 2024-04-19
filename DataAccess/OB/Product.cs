@@ -28,6 +28,7 @@ namespace DataAccess.OB
             LoaiGiamGia = TinhLoaiGiamGia();
             GiaSauGiamGia = CalculateDiscount();
         }
+        
         public override string ToString()
         {
             return $"ID : {IDProduct}|Tên SP : {TenProduct}|Giá SP : {GiaProduct}| Số Lượng :{SoLuongProduct}|\nLoại Giảm Giá : {LoaiGiamGia}|Gia Sau Giảm Giá : {GiaSauGiamGia}";

@@ -27,7 +27,7 @@ namespace DataAccess.LE
                         Console.WriteLine("Nhập Tên Sản Phẩm");
                         nhapTenSanPham = Console.ReadLine();
 
-                        if (nhapTenSanPham == null || !CML.ValiDateProduct.KiemTraInputChu(nhapTenSanPham) || !CML.ValiDateProduct.CheckXSSInput(nhapTenSanPham))
+                        if (!CML.ValiDateProduct.KiemTraInputChuTrong(nhapTenSanPham))
                         {
                             rtdata.ReturnCode = -1;
                             rtdata.ReturnMsg = "Nhập Tên Bị Lỗi. Vui lòng nhập lại";
@@ -42,7 +42,7 @@ namespace DataAccess.LE
                     Console.WriteLine("Nhập Giá Sản Phẩm");
                     string inputGia = Console.ReadLine();
                     decimal nhapGiaSanPham;
-                    while (!decimal.TryParse(inputGia, out nhapGiaSanPham))
+                    while (!CML.ValiDateProduct.CheckTienVNInput(inputGia,out nhapGiaSanPham))
                     {
                         rtdata.ReturnCode = -2;
                         rtdata.ReturnMsg = "Giá Nhập Vào Không Đúng! Vui Lòng Nhập Lại Giá Sản Phẩm";
@@ -53,7 +53,7 @@ namespace DataAccess.LE
                     Console.WriteLine("Nhập Số Lượng Sản Phẩm");
                     string inputSoL = Console.ReadLine();
                     int soLuongSanPham;
-                    while (!int.TryParse(inputSoL, out soLuongSanPham))
+                    while (!CML.ValiDateProduct.CheckIntInput(inputSoL,out soLuongSanPham))
                     {
                         rtdata.ReturnCode = -3;
                         rtdata.ReturnMsg = "Vui lòng nhập số vào";
@@ -148,13 +148,13 @@ namespace DataAccess.LE
             else
             {
 
-                Console.WriteLine("Vui lòng nhập ID của sản phẩm bạn muốn mua:");
+                Console.WriteLine("Vui lòng nhập Tên của sản phẩm bạn muốn mua:");
                 string nhapTenTimKiem = Console.ReadLine();
 
 
                 Console.WriteLine("Nhập số lượng sản phẩm bạn muốn mua:");
                 int soLuongMua;
-                while (!int.TryParse(Console.ReadLine(), out soLuongMua) || soLuongMua <= 0)
+                while (!CML.ValiDateProduct.CheckIntInput(Console.ReadLine(),out soLuongMua) || soLuongMua <= 0)
                 {
                     rtdata.ReturnCode = -4;
                     rtdata.ReturnMsg = "Số lượng không hợp lệ, vui lòng nhập lại:";
