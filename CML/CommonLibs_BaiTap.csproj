@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F4BE95FC-69D4-4209-BB17-658B99B37263}</ProjectGuid>
+    <ProjectGuid>{29C25D76-F774-47C9-B658-87181EED31A9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DataAccess</RootNamespace>
-    <AssemblyName>DataAccess</AssemblyName>
+    <RootNamespace>CML</RootNamespace>
+    <AssemblyName>CML</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,27 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IT\IProductMng.cs" />
-    <Compile Include="IT\IStudentRegister.cs" />
-    <Compile Include="LE\ProductManager.cs" />
-    <Compile Include="LE\StudentRegister.cs" />
-    <Compile Include="OB\DangKyHoc.cs" />
-    <Compile Include="OB\KhoaHoc.cs" />
-    <Compile Include="OB\Product.cs" />
-    <Compile Include="OB\ReturnData.cs" />
-    <Compile Include="OB\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValiDate_BaiTap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\CML\CML.csproj">
-      <Project>{29c25d76-f774-47c9-b658-87181eed31a9}</Project>
-      <Name>CML</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

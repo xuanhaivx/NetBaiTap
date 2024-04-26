@@ -29,13 +29,13 @@ namespace DataAccess.LE
                     {
                         nhapTenKhoaHoc = Console.ReadLine();
 
-                        if (!CML.ValiDateProduct.KiemTraInputChuTrong(nhapTenKhoaHoc))
+                        if (!CML.ValiDate_BaiTap.KiemTraInputChuTrong(nhapTenKhoaHoc))
                         {
                             rtdata.ReturnCode = -1;
                             rtdata.ReturnMsg = "Nhập Tên Bị Lỗi. Vui lòng nhập lại";
                             Console.WriteLine(rtdata.ReturnMsg);
                         }
-                    } while (!CML.ValiDateProduct.KiemTraInputChuTrong(nhapTenKhoaHoc));
+                    } while (!CML.ValiDate_BaiTap.KiemTraInputChuTrong(nhapTenKhoaHoc));
 
                     // Nhập mô tả khóa học
                     Console.WriteLine("Mô Tả Khóa Học");
@@ -43,14 +43,14 @@ namespace DataAccess.LE
                     do
                     {
                         motaKhoaHoc = Console.ReadLine();
-                        if (!CML.ValiDateProduct.KiemTraInputChuTrong(motaKhoaHoc))
+                        if (!CML.ValiDate_BaiTap.KiemTraInputChuTrong(motaKhoaHoc))
                         {
                             rtdata.ReturnCode = -2;
                             rtdata.ReturnMsg = "Lỗi khi nhập mô tả của khóa học";
                             Console.WriteLine(rtdata.ReturnMsg);
                         
                         }
-                    } while (!CML.ValiDateProduct.KiemTraInputChuTrong(motaKhoaHoc));
+                    } while (!CML.ValiDate_BaiTap.KiemTraInputChuTrong(motaKhoaHoc));
                     // Nhập Học Phí Khóa Học
                     Console.WriteLine("Học Phí Khóa Học");
                     decimal nhapHocPhiKhoaHoc;
@@ -58,14 +58,14 @@ namespace DataAccess.LE
                     do
                     {
                         hocPhiInput = Console.ReadLine();
-                        if (!CML.ValiDateProduct.CheckTienVNInput(hocPhiInput, out nhapHocPhiKhoaHoc))
+                        if (!CML.ValiDate_BaiTap.CheckTienVNInput(hocPhiInput, out nhapHocPhiKhoaHoc))
                         {
                             rtdata.ReturnCode = -3;
                             rtdata.ReturnMsg = "Nhập Học Phí Vào Không Đúng! Vui Lòng Nhập Lại Học Phí";
                             Console.WriteLine(rtdata.ReturnMsg);
                         }
 
-                    } while (!CML.ValiDateProduct.CheckTienVNInput(hocPhiInput, out nhapHocPhiKhoaHoc));
+                    } while (!CML.ValiDate_BaiTap.CheckTienVNInput(hocPhiInput, out nhapHocPhiKhoaHoc));
                     
                     // Nhập Ngày Khai Giảng
                     Console.WriteLine("Nhập Ngày Khai Giảng (dd/MM/yyyy)");
@@ -74,7 +74,7 @@ namespace DataAccess.LE
                     do
                     {
                         ngayKhaiGiangInput = Console.ReadLine();
-                        if (!CML.ValiDateProduct.CheckDateTimeInput(ngayKhaiGiangInput, out ngayKhaiGiang))
+                        if (!CML.ValiDate_BaiTap.CheckDateTimeInput(ngayKhaiGiangInput, out ngayKhaiGiang))
                         {
                             Console.WriteLine("Ngày Khai Giảng Bị Lỗi. Vui Lòng Nhập Lại");
                         }
@@ -83,7 +83,7 @@ namespace DataAccess.LE
                             Console.WriteLine("Bạn Đã Nhập Ngày Khai Giảng Ở Quá Khứ. Hãy Nhập Lại");
                         }
 
-                    } while (!CML.ValiDateProduct.CheckDateTimeInput(ngayKhaiGiangInput, out ngayKhaiGiang) || ngayKhaiGiang < DateTime.Now);
+                    } while (!CML.ValiDate_BaiTap.CheckDateTimeInput(ngayKhaiGiangInput, out ngayKhaiGiang) || ngayKhaiGiang < DateTime.Now);
 
                     // -------------------------------------------------------------
                     khoaHocs.Add(new KhoaHoc(nhapTenKhoaHoc,motaKhoaHoc,nhapHocPhiKhoaHoc,ngayKhaiGiang));
@@ -124,13 +124,13 @@ namespace DataAccess.LE
                     do
                     {
                         nhapTenHocSinh = Console.ReadLine();
-                        if (!CML.ValiDateProduct.KiemTraInputChuTrong(nhapTenHocSinh))
+                        if (!CML.ValiDate_BaiTap.KiemTraInputChuTrong(nhapTenHocSinh))
                         {
                             rtdata.ReturnCode = -1;
                             rtdata.ReturnMsg = "Nhập Tên Bị Lỗi. Vui lòng nhập lại";
                             Console.WriteLine(rtdata.ReturnMsg);
                         }
-                    } while (!CML.ValiDateProduct.KiemTraInputChuTrong(nhapTenHocSinh));
+                    } while (!CML.ValiDate_BaiTap.KiemTraInputChuTrong(nhapTenHocSinh));
 
                     // Nhập Ngày Sinh Học Sinh
                     Console.WriteLine("Nhập Ngày Ngày Sinh Học Sinh (Ngày/ Tháng/ năm)");
@@ -141,7 +141,7 @@ namespace DataAccess.LE
                     {
                         inputNgaySinh = Console.ReadLine();
 
-                        if (!CML.ValiDateProduct.CheckDateTimeInput(inputNgaySinh, out ngayKhaiSinh))
+                        if (!CML.ValiDate_BaiTap.CheckDateTimeInput(inputNgaySinh, out ngayKhaiSinh))
                         {
                             Console.WriteLine("Ngày Khai Giảng Bị Lỗi Định Dạng (Ngày/ Tháng/ năm). Vui Lòng Nhập Lại");
                         }
@@ -151,7 +151,7 @@ namespace DataAccess.LE
                             Console.WriteLine("Bạn Đã Nhập Ngày Khai Sinh Ở Tương Lai. Hãy Nhập Lại");
                         }
 
-                    } while (!CML.ValiDateProduct.CheckDateTimeInput(inputNgaySinh, out ngayKhaiSinh)|| ngayKhaiSinh > DateTime.Now);
+                    } while (!CML.ValiDate_BaiTap.CheckDateTimeInput(inputNgaySinh, out ngayKhaiSinh)|| ngayKhaiSinh > DateTime.Now);
 
                     Student hocSinhNew = new Student(nhapTenHocSinh, ngayKhaiSinh);
                     // Hiển thị danh sách khóa học trước khi nhập tên khóa học muốn đăng ký

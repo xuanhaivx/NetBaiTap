@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CML
 {
-    public class ValiDateProduct
+    public class ValiDate_BaiTap
     {
         public static bool CheckXSSInput(string input)
         {

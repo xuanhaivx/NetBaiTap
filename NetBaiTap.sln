@@ -5,9 +5,14 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetBaiTap", "NetBaiTap\NetBaiTap.csproj", "{511D291C-293E-43C8-8C92-69789230DEE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F4BE95FC-69D4-4209-BB17-658B99B37263}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess_BaiTap", "DataAccess\DataAccess_BaiTap.csproj", "{F4BE95FC-69D4-4209-BB17-658B99B37263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CML", "CML\CML.csproj", "{29C25D76-F774-47C9-B658-87181EED31A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibs_BaiTap", "CML\CommonLibs_BaiTap.csproj", "{29C25D76-F774-47C9-B658-87181EED31A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaiTapThuHanhSQL", "BaiTapThuHanhSQL", "{5510CCBF-FBB7-4D42-BF24-400A02A112EF}"
+	ProjectSection(SolutionItems) = preProject
+		SqlQuery_Buoi11.sql = SqlQuery_Buoi11.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

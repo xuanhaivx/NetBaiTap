@@ -52,13 +52,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CML\CML.csproj">
+    <ProjectReference Include="..\CML\CommonLibs_BaiTap.csproj">
       <Project>{29c25d76-f774-47c9-b658-87181eed31a9}</Project>
-      <Name>CML</Name>
+      <Name>CommonLibs_BaiTap</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+    <ProjectReference Include="..\DataAccess\DataAccess_BaiTap.csproj">
       <Project>{f4be95fc-69d4-4209-bb17-658b99b37263}</Project>
-      <Name>DataAccess</Name>
+      <Name>DataAccess_BaiTap</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
